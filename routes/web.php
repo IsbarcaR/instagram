@@ -6,7 +6,7 @@ use App\Http\Controllers\FotoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 Route::get('/register', [RegisterController::class, 'create'])->name('register');  //Formulario de registro
 Route::post('/register', [RegisterController::class, 'store']);  //Registrar usuario
